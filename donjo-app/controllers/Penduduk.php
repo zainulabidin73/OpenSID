@@ -750,4 +750,12 @@ class Penduduk extends Admin_Controller {
 
 		$this->load->view("sid/kependudukan/ajax_cetak_bersama", $data);
 	}
+
+	public function acak()
+	{
+		$this->load->model('acak_model');
+		$this->acak_model->acak_penduduk();
+		$this->acak_model->acak_keluarga();
+	}
+
 }
